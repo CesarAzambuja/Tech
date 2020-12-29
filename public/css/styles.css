@@ -1,0 +1,345 @@
+/*FONTES
+font-family: 'Roboto', sans-serif;
+font-family: 'Roboto Mono', monospace;
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html body{
+    font-family: 'Roboto', sans-serif;   
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+    background-color:orangered;
+    height: 100px;
+    z-index: 2;
+}
+
+.logo{
+    width: 90px;
+    height: 90px;
+    background-image: url(/images/icon.png);
+    background-size: cover;
+}
+
+.menu{
+    display: flex;
+    align-items: center;    
+}
+
+.menu a{
+    color: black;
+    text-decoration: none;
+}
+
+.menu a li {
+    list-style: none;
+    margin-right: 40px;
+    font-size: 1.2rem;
+    font-weight: 400;
+    transition: 300ms;
+    cursor: pointer;
+}
+
+.menu a li:hover{
+    font-weight: 900;
+    color: white;
+    
+}
+
+.redes a i{
+    color: black;
+    transform: scale(1.5);
+    padding: 10px;
+}
+
+.redes a i:hover{
+    color: white;
+    transform: scale(1.9);
+}
+
+.banner{
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 100px);
+    background-image: url(/images/banner1.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    image-rendering: crisp-edges;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 3%;
+}
+.banner .text {
+    padding-top: 250px;
+    height: 600px;
+    width: 35%;
+}
+
+.banner h3{
+    color: white;
+    font-size: 30px;
+    line-height: 40px;
+}
+
+.banner h1{
+    color: orangered;
+    font-size: 45px;
+    line-height: 55px;
+    border-right: 6px solid white;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.banner h2{
+    color: whitesmoke;
+    font-size: 35px;
+    line-height: 45px;
+    font-weight: 400;
+}
+
+.btn{
+    width: 250px;
+    height: 70px;
+    padding: 10px;
+    background-color: orangered;
+    color: white;
+    font-size: 25px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: rgb(235, 99, 49);
+    border: none;
+}
+
+.btn:active{
+    transform: scale(1.03);
+}
+
+.banner .text btn:focus{
+    outline: none;
+}
+
+.sobre{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sobre h1{
+    padding: 20px;
+    font-size: 28px;
+    line-height: 38px;
+    color: orangered;
+}
+
+.jobs{
+    margin: 30px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 6rem;    
+}
+
+.image{
+    cursor: pointer;
+    width: 280px;
+    height: 280px;
+    box-shadow: black;
+    border-radius: 50%;
+    background-image: url(/images/sites.png);
+    background-size: 300px 300px;
+}
+
+.texto{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    opacity: 0;
+    transition: .6s;
+}
+
+.texto h1{
+    font-size: 25px;
+    padding: 8px 20px 8px 50px;
+    background-color: white;
+    border-radius: 16px;
+}
+
+.texto:hover{
+    background-color: rgba(0,0,25,0.3);
+    border-radius: 50%;
+    opacity: 1;
+}
+
+.apresentacao{
+    background-color: rgba(0,0,0,.9);
+    padding: 2%;
+    display: flex;
+}
+
+.texto_apresentacao{
+    width: 50%;
+    padding: 2%;
+}
+
+.texto_apresentacao h1{
+    color: orangered;
+    font-size: 40px;
+    line-height: 50px;
+    margin-bottom: 15px;
+}
+
+.texto_apresentacao p{
+    color: white;
+    font-size: 18px;
+    line-height: 40px;
+    font-weight: lighter;
+    text-align: justify;
+}
+
+.texto_apresentacao strong{
+    color: orangered;
+    font-size: 20px;
+}
+
+.form{
+    width: 30%;
+    margin: 0 auto;
+    color: white;
+}
+
+form{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+form input{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    padding: 10px;
+    width: 100%;
+    height: 50px;
+    margin-bottom: 15px;
+    border-radius: 16px;
+    border: none;
+}
+
+form textarea{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    padding: 10px;
+    width: 100%;
+    height: 120px;
+    border-radius: 16px;
+}
+
+.nossos_contatos{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nossos_contatos h1{
+    font-size: 28px;
+    line-height: 38px;
+    color: orangered;
+}
+.contatos{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.contato{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contato a i{
+    color: black;
+    transform: scale(3);
+    margin: 25px 0;
+    transition: 0.4s;
+}
+
+.contato a i:hover{
+    color: orangered;
+}
+
+.contato h3{
+    padding: 5px;
+    color: orangered;
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 60px;
+    background-color: rgba(0,0,0,.9);
+}
+
+footer p{
+    color: white;
+    font-size: 18px;
+    line-height: 40px;
+    font-weight: lighter;
+    text-align: justify;
+}
+
+footer strong{
+    color: orangered;
+    font-size: 20px;
+}
+
+.animation {
+
+    /*adicionar no elemento animado
+    border-right: 2px solid white;
+    white-space: nowrap;
+    overflow: hidden;
+    */
+    animation: cursor 500ms steps(40) infinite normal,
+    digitacao 4s steps(40) 1s normal both;
+}
+
+@keyframes digitacao {
+    from {
+        width: 0;
+    }
+    to {
+        width: 9em;
+    }
+}
+
+@keyframes cursor {
+    from{
+        border-right-color:  orangered;
+    }
+    to{
+        border-right-color: rgba(25, 25, 25, 075);
+    }
+}

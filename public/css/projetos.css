@@ -1,0 +1,227 @@
+.projetos{
+    width: 100%;
+    height: calc(100vh - 100px);
+    background: rgb(1,0,18);
+    background: linear-gradient(160deg, rgba(1,0,18,0.8356384790244222) 0%, rgba(14,14,18,1) 100%);
+    background-repeat: no-repeat;
+    /*min-height: 100vh; */
+    overflow: hidden;
+}
+
+#wrapper{
+    text-align: center;
+    padding: 16px;
+    
+}
+
+#wrapper img{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 3px solid var(--color-primary);
+    margin-bottom: 16px;
+}
+
+#wrapper h1{
+    margin-top: 3%;
+    margin-bottom: 2%;
+    font-size: 35px;
+    line-height: 45px;
+    font-weight: 700;
+    color: orangered
+}
+
+#wrapper h2{
+    font-size: 24px;
+    line-height: 34px;
+    font-weight: 500;
+    margin-top: 8px;
+    opacity: 0.8;
+}
+#wrapper p{
+    max-width: 500px;
+    margin: 8px auto;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 300;
+    text-align: justify;
+}
+
+#wrapper p a{
+    color: var(--color-primary);
+    font-weight: 300;
+    text-decoration: none;
+    border-bottom: 1px solid var(--color-primary);
+    transition: 600ms;
+}
+
+#wrapper p a:hover{
+    transition: 600ms;
+    color: white;
+    border-bottom: 1px solid #fff;
+}
+
+#links-footer{
+    padding: 16px;
+    font-weight: normal;
+    font-size: 16px;
+}
+
+#links-footer a{
+    font-weight: normal;
+    font-size: 16px;
+}
+
+#links-footer a:hover{
+    color: var(--color-primary);
+}
+
+
+#links-footer a i{
+    margin-right: 0.2rem;
+}
+
+/* CARDS */
+
+.cards{
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /*divide em fraçoes e colunas*/
+    gap: 35px; /* dar espaço entre os elementos do grid*/
+    padding-bottom: 30px;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.card{
+    border-radius: 12px;
+    background: rgb(56,54,54);
+    background: linear-gradient(146deg, rgba(56,54,54,.5) 0%, rgba(124,120,117,.5) 35%, rgba(235,232,229,.5) 100%);
+    display: grid;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: 1000ms;
+}
+
+.card:hover{
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.card__image__container img{
+    width: 100%;
+    border-radius: 12px 12px 0 0;
+    
+}
+
+.card__content, 
+.card__info{
+    padding: 24px;
+}
+
+.card__info{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.card__price{
+    background-color: var(--color-primary);
+    filter: brightness(90%);
+    color: white;
+    padding: 5px 20px;
+    border-radius: 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: 600ms;
+}
+
+.card__price:hover{
+    transition: 600ms;
+    background-color: #ccc;
+    color: var(--color-primary);
+    font-weight: 700;
+}
+
+/* Modal overlay, para escurecer o fundo e aparecer uma tela branca com o evento de click, é importante utilizar o position e  informar a posição exata */
+.modal-overlay{
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    opacity: 0;
+    /* display: none; */
+    visibility: hidden;
+}
+
+.modal{
+    background: rgb(56,54,54);
+    background: linear-gradient(190deg, rgba(56,54,54,0.927608543417367) 0%, rgba(38,37,37,0.8631827731092436) 35%, rgba(66,65,63,0.5830707282913166) 100%);
+    width: 90%;
+    height: 90%;
+    margin: 5vh auto;
+    position: relative;
+    border-radius: 12px;
+}
+
+.modal .close-modal{
+    color: white;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    cursor: pointer;
+}
+
+/* MODAL ATIVO */
+.modal-overlay.active{
+    /* display: block; */
+    opacity: 1;
+    visibility: visible;
+}
+
+footer{
+    height: 50px;
+    width: 100%;
+    border-top: 1px solid #ccc;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    position: absolute;
+    padding: 10px;
+    bottom: 0;
+}
+
+footer h1{
+    font-size: 18px;
+}
+
+iframe{
+    width: 100%;
+    height: 95%;
+    position: absolute;
+    bottom: 10px;
+}
+@media screen and (max-width: 1100px){
+    .profissionais{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+@media screen and (max-width: 650px){
+    .cards{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+
+    .links{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}

@@ -1,0 +1,93 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+    <title>Sobre | WayneTechnology</title>
+{%endblock%}
+
+{% block content %}
+    <section class="banner">
+        <div class="text">
+            <h3>Olá bem Vindo a </h3>
+            <h1 class="animation">Wayne Technology.</h1>
+            <h2>Traga sua <strong>MARCA</strong> ou </h2>
+            <h3>PRODUTO</h3>
+            <h2>para a internet hoje mesmo!</h2>
+            <button class="btn">Entrar em Contato</button>
+        </div><!--text-->
+    </section>
+
+    <section class="sobre">
+        <h1>Desenvolvemos sistema e soluções personalizadas</h1>
+        <h2>Focada no seu objetivo e no seu publico alvo</h2>
+        <div class="jobs">
+           <div class="image">
+                <div class="texto">
+                    <h1>Sites</h1>
+                </div><!--text-->
+           </div><!--image-->
+           <div class="image">
+                <div class="texto">
+                    <h1>Landing Pages</h1>
+                </div><!--text-->
+           </div><!--image-->
+           <div class="image">
+                <div class="texto">
+                    <h1>Lojas Virtuais</h1>
+                </div><!--text-->
+           </div><!--image-->
+           <div class="image">
+                <div class="texto">
+                    <h1>Sistemas Web</h1>
+                </div><!--text-->
+           </div><!--image-->
+        </div><!--jobs-->
+    </section>
+
+    <section class="apresentacao" id="apresentacao">
+        <div class="texto_apresentacao">
+            <h1>Sobre | Wayne</h1>
+            <p>Nos dias de hoje estar na internet é fundamental para o sucesso de qualquer projeto. Seja para apresentar ao mundo sua marca, serviço, produto ou ideia.</p>
+                <br>
+
+                <p>Pensando nisso criamos a <strong>Wayne Technology.</strong> Somos uma empresa nova em ascensão no mercado de tecnologia, focada em superar as expectativas de nossos clientes através do desenvolvimento de aplicações e sites modernos e customizados.
+                Cada projeto para a gente é único, e entendemos que a comunição é a chave para identificar suas necessidades e entregar o melhor produto possível para atingir seus objetivos.</p>
+        </div><!--texto_apresentacao-->
+        <div class="form">
+            <h1>Gostou? Preencha o formulario que entraremos em contato</h1>
+            <form action="">
+                <input type="text" placeholder="  * Nome Completo">
+                <input type="text" placeholder="  * E-mail">
+                <input type="text" placeholder="  * Assunto">
+                <textarea name="mensagem" id="mensagem" placeholder=" * Como Podemos Ajudar"></textarea>
+                <button type="submit" class="btn">Enviar</button>
+            </form>
+        </div><!--form-->
+    </section>
+
+    <section class="nossos_contatos" id="nossos_contatos">
+        <h1>Contatos</h1>
+        <h2>Entre em contato com a gente. Será um prazer conversar e tirar suas duvidas.</h2>
+        <div class="contatos">
+           <div class="contato">
+               <a href="#"><i class="fab fa-whatsapp"></i></a>
+               <h3>WhatsApp</h3>
+               <p>(11) 9 5439-5927</p>
+           </div> <!--contato-->
+           <div class="contato">
+                <a href="#"><i class="fab fa-telegram"></i></a>
+                <h3>Telegram</h3>
+                <p>DevWayne</p>
+            </div> <!--contato-->
+           <div class="contato email">
+               <a href="#"><i class="far fa-envelope "></i></a>
+               <h3>E-mail</h3>
+               <p>contato@waynetechnology.com.br</p>
+           </div> <!--contato-->
+        </div><!--contatos-->
+    </section>
+    <footer>
+        <p>Desenvolvido por <strong>Wayne Technology</strong> | 2020 Todos os direitos reservados.</p>
+    </footer>
+    
+
+{% endblock %}
